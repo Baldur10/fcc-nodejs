@@ -9,3 +9,4 @@ const peter = 'peter'
 
 // Displaying data
 module.exports = {john,peter}
+// console.log(module)

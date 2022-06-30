@@ -2,9 +2,9 @@
 // Modules - Encapsulated Code (only share minimum)
 
 const names = require('./4-names')
-const sayHi = require('./5-utils')
+const utils = require('./5-utils')
 console.log(names)
 
-sayHi('susan')
-sayHi(names.john)
-sayHi(names.peter)
+utils.sayHi('susan')
+utils.sayHi(names.john)
+utils.greeting(names.peter)

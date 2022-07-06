@@ -1,10 +1,6 @@
-// CommonJS, every file is a module (be default)
-// Modules - Encapsulated Code (only share minimum)
+const {readFileSync,writeFileSync} = require('fs');
 
-const names = require('./4-names')
-const utils = require('./5-utils')
-console.log(names)
+const first = readFileSync('./content/first.txt','utf8');
+const second = readFileSync('./content/second.txt','utf8');
 
-utils.sayHi('susan')
-utils.sayHi(names.john)
-utils.greeting(names.peter)
+console.log(first, second);

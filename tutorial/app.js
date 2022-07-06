@@ -1,6 +1,7 @@
-const {readFileSync,writeFileSync} = require('fs');
+// npm init -y to quickly create package.json
 
-const first = readFileSync('./content/first.txt','utf8');
-const second = readFileSync('./content/second.txt','utf8');
+const _ = require('lodash');
 
-console.log(first, second);
+const items = [1, [2, [3, [4]]]];
+const newItems = _.flattenDeep(items);
+console.log(newItems);

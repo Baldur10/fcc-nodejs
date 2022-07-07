@@ -17,4 +17,6 @@ const server = http.createServer((req,res) => {
         <a href="/">go back home</a>
         `);
     }
-}).listen(5000);
+}).listen(5000, () => {
+    console.log(`Server listening on port : 5000`);
+});

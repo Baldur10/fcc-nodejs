@@ -1,7 +1,7 @@
-// npm init -y to quickly create package.json
+const http = require('http');
 
-const _ = require('lodash');
-
-const items = [1, [2, [3, [4]]]];
-const newItems = _.flattenDeep(items);
-console.log(newItems);
+const server = http.createServer((req,res) => {
+    
+}).listen(5000, ()=> {
+    console.log(`Server is listening on port: 5000`);
+})

@@ -1,7 +1,14 @@
-const http = require('http');
+const { createReadStream } = require(`fs`);
 
-const server = http.createServer((req,res) => {
-    
-}).listen(5000, ()=> {
-    console.log(`Server is listening on port: 5000`);
+const reader = createReadStream(`./content/big2.txt`, {
+    highWaterMark: 128, 
+    encoding:`utf-8`
+});
+
+reader.on(`data`,(values)=>{
+    console.log(values);
+})
+
+reader.on(`error`, (err) => {
+    console.log(err);
 })
